@@ -11,3 +11,11 @@ palette:
   - SANDY: 62
   - MYCELIUM_SHORE: 64
   - MYCELIUM: 255
+
+trees:
+  - density: 1
+    items:
+      MUSHROOMISLE: 1
+    y:
+      min: 63
+      max: 180

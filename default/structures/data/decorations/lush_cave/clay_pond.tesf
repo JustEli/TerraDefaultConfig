@@ -1,0 +1,61 @@
+id "clay_pond";
+
+num width = randomInt(10)+3;
+num height = randomInt(3)+2;
+
+num r2 = 3.1415 * width;
+
+for(num x = -width; x <= width; x = x + 1) {
+    for(num z = -width; z <= width; z = z + 1) {
+
+        num d2 = (x*x + z*z + ((randomInt(5) - 2)/ 2));
+        if(d2 > r2) {
+            continue;
+        }
+
+        for(num y = -height; y <= height; y = y + 1) {
+            if (getMark(x,y,z) != "pond" &&
+                getBlock(x,y+1,z) == "minecraft:air" &&
+                (
+                    getBlock(x,y,z) == "minecraft:stone" ||
+                    getBlock(x,y,z) == "minecraft:andesite" ||
+                    getBlock(x,y,z) == "minecraft:diorite" ||
+                    getBlock(x,y,z) == "minecraft:gravel" ||
+                    getBlock(x,y,z) == "minecraft:deepslate" ||
+                    getBlock(x,y,z) == "minecraft:moss_block"
+                )
+            ) {
+                if (getBlock(x-1,y,z) == "minecraft:air" ||
+                    getBlock(x+1,y,z) == "minecraft:air" ||
+                    getBlock(x,y,z-1) == "minecraft:air" ||
+                    getBlock(x,y,z+1) == "minecraft:air") {
+                    setMark(x,y,z, "pond");
+                    if (randomInt(10) == 0) {
+                        block(x,y,z, "minecraft:water");
+                    } else {
+                        block(x,y,z, "minecraft:clay");
+                    }
+                    block(x,y+1,z, "minecraft:air");
+                    block(x,y+2,z, "minecraft:air");
+                } else {
+                    if (randomInt(200) == 0) {
+                        entity(x+0.5,y+2,z+0.5, "AXOLOTL");
+                    }
+                    setMark(x,y,z, "pond");
+                    if (randomInt(12) == 0) {
+                        structure(x,y,z, "big_dripleaf", "NONE", "CW_90", "CCW_90", "CW_180");
+                    } else if (randomInt(12) == 0) {
+                        block(x,y,z, "minecraft:small_dripleaf[waterlogged=true,half=lower]");
+                        block(x,y+1,z, "minecraft:small_dripleaf[waterlogged=false,half=upper]");
+                        block(x,y+2,z, "minecraft:air");
+                    } else {
+                        block(x,y,z, "minecraft:water");
+                        block(x,y+1,z, "minecraft:air");
+                        block(x,y+2,z, "minecraft:air");
+                    }
+                }
+                block(x,y-1,z, "minecraft:clay");
+            }
+        }
+    }
+}

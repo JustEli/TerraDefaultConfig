@@ -23,7 +23,6 @@ tags:
   - "LAND"
   - "HOT"
   - "DRY"
-  - "RIVER_ERODE"
   
 flora:
   - density: 1
@@ -43,9 +42,15 @@ flora:
 erodible: true
 
 trees:
-  - density: 0.75
+  - density: 0.02
     items:
-      - DRIPSTONE: 9
+      - DEEP_DARK: 1
+    y:
+      min: 24
+      max: 25
+  - density: 0.225
+    items:
+      - DRIPSTONE: 2
       - GEODE: 1
     y:
       min: 48

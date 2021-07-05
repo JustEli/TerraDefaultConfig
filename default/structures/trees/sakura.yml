@@ -1,0 +1,26 @@
+id: SAKURA
+scripts:
+  "sakura1": 1
+  "sakura2": 8
+  "sakura3": 8
+  "sakura4": 8
+  "sakura5": 8
+  "sakura6": 6
+  "sakura7": 6
+  "sakura8": 8
+  "sakura9": 8
+  "sakura10": 6
+  "sakura11": 6
+  "sakura12": 6
+  "sakura13": 6
+  "sakura14": 6
+  "sakura15": 4
+  "sakura16": 2
+  "sakura17": 4
+  "sakura18": 4
+  "sakura19": 1
+  "sakura20": 1
+y-offset: 0
+spawnable:
+  - "minecraft:grass_block"
+  - "minecraft:podzol"

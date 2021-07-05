@@ -1,6 +1,6 @@
 id "stalactite";
 
-num height = randomInt(4) + 1;
+num height = randomInt(5) + 1;
 
 bool doMerge = false;
 

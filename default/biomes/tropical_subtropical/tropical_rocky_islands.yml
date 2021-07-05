@@ -1,0 +1,117 @@
+id: "TROPICAL_ROCKY_ISLANDS"
+extends: 
+  - "BASIC_ORES"
+  - "CARVING"
+vanilla: BEACH
+
+tags:
+  - "LAND"
+  - "TROPICAL"
+
+noise-equation: "if(
+  max(y-51, 0),
+  if(
+    max(y-64, 0),
+    if(
+      max(y-84, 0),
+      if(
+        max(y-120, 0),
+        0,
+        -((y / 33)^2) + 4/6 + noise2(x, z)*11),
+      -((y / 33)^2) + 4/6 + noise2(x, z)*12),
+    -((y / 60)^2) + 1 + noise2(x, z)/2),
+  1)"
+
+palette:
+  - "BLOCK:minecraft:bedrock": 0
+  - BEDROCK_MOST: 1
+  - BEDROCK_HALF: 2
+  - BEDROCK_LITTLE: 3
+  - DEEPSLATE: 20
+  - TROPICAL_OCEAN_LOWER: 54
+  - TROPICAL_OCEAN_MIDDLE: 59
+  - TROPICAL_OCEAN_UPPER: 62
+  - TROPICAL_BEACH_LOWER: 63
+  - TROPICAL_BEACH_UPPER: 64
+  - TROPICAL_CLIFF: 255
+
+trees:
+  - density: 0.02
+    items:
+      - DEEP_DARK: 1
+    y:
+      min: 24
+      max: 25
+  - density: 0.3
+    items:
+      - DRIPSTONE: 2
+      - GEODE: 1
+    y:
+      min: 48
+      max: 49
+  - density: 0.5
+    items:
+      - PALM: 1
+    y:
+      min: 62
+      max: 65
+  - density: 10
+    items:
+      - PALM_SMALL: 1
+    y:
+      min: 65
+      max: 150
+
+flora:
+  - density: 25
+    y:
+      min: 30
+      max: 61
+    simplex-frequency: 0.05
+    items:
+      - TALL_SEAGRASS: 1
+      - SEAGRASS: 3
+      - KELP_SHORT: 5
+  - density: 10
+    y:
+      min: 61
+      max: 255
+    items:
+      - SMALL_ROCK: 1
+      - FERN: 1
+      - GRASS: 1
+      - TALL_GRASS: 1
+      - DEAD_BUSH: 1
+  - density: 1
+    y:
+      min: 10
+      max: 56
+    items:
+      - GLOW_LICHEN: 1
+  - density: 20
+    items:
+      - CEILING_LEAVES: 4
+      - VINES: 4
+      - VINES_TALL: 2
+      - STALACTITE: 2
+      - STALAGMITE: 2
+      - SHROOMLIGHT: 1
+    y:
+      min: 15
+      max: 62
+  - density: 10
+    items:
+      - CEILING_LEAVES: 6
+      - STALACTITE: 1
+      - SHROOMLIGHT: 1
+    y:
+      min: 63
+      max: 84
+  - density: 5
+    items:
+      - STALACTITE: 1
+      - STALAGMITE: 2
+      - SHROOMLIGHT: 1
+    y:
+      min: 8
+      max: 14

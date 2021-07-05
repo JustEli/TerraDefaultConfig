@@ -1,0 +1,15 @@
+layers:
+  - materials:
+      - "minecraft:moss_block": 1
+    layers: 1
+id: "CEILING_MOSS"
+ceiling: true
+spawnable:
+  - "minecraft:stone"
+  - "minecraft:gravel"
+  - "minecraft:dirt"
+  - "minecraft:coarse_dirt"
+  - "minecraft:grass_block"
+replaceable:
+  - "minecraft:air"
+  - "minecraft:stone_slab"

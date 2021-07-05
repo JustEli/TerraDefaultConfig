@@ -1,0 +1,28 @@
+id "cave_vines";
+
+str blockID = getBlock(0,1,0);
+if(blockID != "minecraft:stone" && blockID != "minecraft:diorite" && blockID != "minecraft:granite" && blockID != "minecraft:andesite" && blockID != "minecraft:moss_block") {
+    fail; // Cancel gen if not in cave.
+}
+
+num height = randomInt(2) + randomInt(2) + randomInt(8) + 1;
+
+for(num i = 0; i < height; i = i + 1) {
+    if(getBlock(0, -i, 0) != "minecraft:air") fail;
+}
+
+
+num current = 0;
+for(num i = 0; i < height - 1; i = i + 1) {
+    if(randomInt(height*2+2) == 0) {
+        block(0, current, 0, "minecraft:cave_vines_plant[berries=true]", false);
+    } else {
+        block(0, current, 0, "minecraft:cave_vines_plant[berries=false]", false);
+    }
+    current = current - 1;
+}
+if(randomInt(height*2+2) == 0) {
+    block(0, current, 0, "minecraft:cave_vines[age=1,berries=true]", false);
+} else {
+    block(0, current, 0, "minecraft:cave_vines[age=1,berries=false]", false);
+}

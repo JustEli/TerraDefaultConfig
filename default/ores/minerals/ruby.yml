@@ -1,0 +1,9 @@
+material: "minecraft:brown_mushroom_block[down=false,up=false,west=false]"
+material-overrides:
+  "minecraft:deepslate": "minecraft:brown_mushroom_block[up=false,west=false]"
+  "minecraft:tuff": "minecraft:brown_mushroom_block[up=false,west=false]"
+size:
+  min: 8
+  max: 8
+extends: MINERAL
+id: "RUBY_ORE"

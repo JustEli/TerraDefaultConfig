@@ -1,5 +1,5 @@
 layers:
-  - materials: "minecraft:blackstone"
+  - materials: "minecraft:tuff"
     layers: 1
   - materials: "minecraft:stone"
     layers: 1

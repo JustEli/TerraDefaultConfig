@@ -1,0 +1,15 @@
+layers:
+  - materials:
+      - "minecraft:moss_block": 1
+      - "minecraft:moss_carpet": 2
+    layers: 1
+id: "MOSS"
+spawnable:
+  - "minecraft:stone"
+  - "minecraft:gravel"
+  - "minecraft:dirt"
+  - "minecraft:coarse_dirt"
+  - "minecraft:grass_block"
+replaceable:
+  - "minecraft:air"
+  - "minecraft:stone_slab"

@@ -1,6 +1,8 @@
 id: MOUNTAINS_PRETTY_FLORA
 abstract: true
-extends: BASIC_ORES
+extends: 
+  - "BASIC_ORES"
+  - "CARVING"
 flora:
   - density: 1
     y:

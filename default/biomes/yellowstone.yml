@@ -25,9 +25,15 @@ carving: {}
 tags:
   - "LAND"
 trees:
-  - density: 0.75
+  - density: 0.02
     items:
-      - DRIPSTONE: 9
+      - DEEP_DARK: 1
+    y:
+      min: 24
+      max: 25
+  - density: 0.3
+    items:
+      - DRIPSTONE: 2
       - GEODE: 1
     y:
       min: 48

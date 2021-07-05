@@ -1,0 +1,57 @@
+id "deep_dark";
+
+num width = randomInt(6)+8;
+
+num height = 1;
+while(getBlock(0, height, 0) == "minecraft:air") {
+    height = height + 1;
+}
+height = height + 10;
+
+num r2 = 3.1415 * width * 2;
+
+for(num x = -width; x <= width; x = x + 1) {
+    for(num z = -width; z <= width; z = z + 1) {
+
+        num d2 = (x*x + z*z + ((randomInt(5) - 2)/ 2));
+        if(d2 > r2) {
+            continue;
+        }
+        
+        for(num y = -height-5; y <= height-5; y = y + 1) {
+
+            if(
+                (getBlock(x,y,z) == "minecraft:stone" || getBlock(x,y,z) == "minecraft:deepslate" || getBlock(x,y,z) == "minecraft:tuff")
+            ) {
+
+                if(
+                    getBlock(x,y-1,z) != "minecraft:air" &&
+                    getBlock(x,y+1,z) != "minecraft:air" &&
+                    getBlock(x-1,y,z) != "minecraft:air" &&
+                    getBlock(x+1,y,z) != "minecraft:air" &&
+                    getBlock(x,y,z-1) != "minecraft:air" &&
+                    getBlock(x,y,z+1) != "minecraft:air"
+                ) {
+                    continue;
+                }
+
+                num rand = randomInt(12);
+
+                if (rand == 0) {
+                    // Sculk Trap
+                    block(x,y,z,"minecraft:brown_mushroom_block[north=false,south=false,west=false]");
+                } else if (rand == 1) {
+                    // Sculk Chute
+                    block(x,y,z,"minecraft:brown_mushroom_block[east=false,south=false,west=false]");
+                } else if (rand != 2) {
+                    // Sculk Block
+                    block(x,y,z,"minecraft:brown_mushroom_block[east=false,north=false,south=false,west=false]");
+
+                    if (randomInt(40) == 0 && getBlock(x,y+1,z) == "minecraft:air") { // randomInt(20)
+                        block(x,y+1,z,"minecraft:sculk_sensor");
+                    }
+                }
+            }
+        }
+    }
+}

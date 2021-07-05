@@ -1,0 +1,26 @@
+// finds a spawn location for a lush cave.
+id "deep_dark_finder";
+
+num height = originY();
+
+while(height > 0 && getBlock(0, height-originY(), 0) != "minecraft:air") {
+    height = height - 1;
+}
+
+while(height > 0 && getBlock(0, height-originY(), 0) == "minecraft:air") {
+    height = height - 1;
+}
+
+if(height <= 1) return;
+
+num rot = rotationDegrees();
+
+if (rot == 0) {
+    structure(0,(height-originY()),0,"deep_dark","NONE");
+} else if (rot == 90) {
+    structure(0,(height-originY()),0,"deep_dark","CCW_90");
+} else if (rot == 180) {
+    structure(0,(height-originY()),0,"deep_dark","CW_180");
+} else if (rot == 270) {
+    structure(0,(height-originY()),0,"deep_dark","CW_90");
+}

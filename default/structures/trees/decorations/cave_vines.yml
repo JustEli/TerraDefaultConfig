@@ -1,0 +1,10 @@
+scripts: cave_vines_finder
+id: CAVE_VINES
+y-offset: 0
+spawnable:
+  - "minecraft:stone"
+  - "minecraft:gravel"
+  - "minecraft:dirt"
+  - "minecraft:coarse_dirt"
+  - "minecraft:grass_block"
+  - "minecraft:cobblestone"

@@ -1,0 +1,29 @@
+id "big_dripleaf";
+
+num height = randomInt(4) + 1;
+
+for(num i = 1; i < height; i = i + 1) {
+    if(getBlock(0, i, 0) != "minecraft:air" && getBlock(0, i, 0) != "minecraft:water") fail;
+}
+
+if (height == 1) {
+    block(0, 0, 0, "minecraft:big_dripleaf[waterlogged=true]");
+} else {
+    block(0, 0, 0, "minecraft:big_dripleaf_stem[waterlogged=true]");
+
+    num current = 0;
+    for(num i = 0; i < height - 1; i = i + 1) {
+        if(current == 0) {
+            block(0, current, 0, "minecraft:big_dripleaf_stem[waterlogged=true]");
+        } else {
+            block(0, current, 0, "minecraft:big_dripleaf_stem[waterlogged=false]");
+        }
+        current = current + 1;
+    }
+
+    if(getBlock(0, current, 0) == "minecraft:water") {
+        block(0, current, 0, "minecraft:big_dripleaf[waterlogged=true]");
+    } else {
+        block(0, current, 0, "minecraft:big_dripleaf[waterlogged=false]");
+    }
+}

@@ -1,5 +1,7 @@
 id: OCEAN_FLORA
-extends: BASIC_ORES
+extends: 
+  - "BASIC_ORES"
+  - "CARVING"
 abstract: true
 carving:
   CAVE_OCEAN: 40

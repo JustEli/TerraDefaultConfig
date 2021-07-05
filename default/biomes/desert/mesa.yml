@@ -3,7 +3,9 @@ noise-equation: "((-((y / base)^2)) + 1) + ((-mesa(x, z))^8)/1.5 + |noise2(x, z)
 elevation:
   #equation: "min(floor(((max(noise2(x/1.5, z/1.5)+0.25, 0)))*5), 3)*0.45 + if(max(noise2(x/1.5, z/1.5)+0.05, 0), (noise2(x*2,z*2))*0.55, 0)"
   equation: "if(mesa(x, z) < -0.975, mesaMask(x, z) + if(mesa(x*3, z*3) < -0.95, mesaMask(x*3, z*3)*0.75, 0), 0)"
-extends: "BASIC_ORES"
+extends: 
+  - "BASIC_ORES"
+  - "CARVING"
 id: "MESA"
 erode: MESA
 color: 0xd94515
@@ -82,9 +84,15 @@ flora:
       - DEAD_BUSH: 1
       - SMALL_ROCK: 1
 trees:
-  - density: 0.75
+  - density: 0.02
     items:
-      - DRIPSTONE: 9
+      - DEEP_DARK: 1
+    y:
+      min: 24
+      max: 25
+  - density: 0.225
+    items:
+      - DRIPSTONE: 2
       - GEODE: 1
     y:
       min: 48

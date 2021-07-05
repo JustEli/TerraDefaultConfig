@@ -1,0 +1,97 @@
+id "lush_cave";
+
+num width = randomInt(6)+8;
+
+num height = 1;
+while(getBlock(0, height, 0) == "minecraft:air") {
+    height = height + 1;
+}
+height = height + 10;
+
+num r2 = 3.1415 * width * 2;
+
+for(num x = -width; x <= width; x = x + 1) {
+    for(num z = -width; z <= width; z = z + 1) {
+
+        num d2 = (x*x + z*z + ((randomInt(5) - 2)/ 2));
+        if(d2 > r2) {
+            continue;
+        }
+        
+        for(num y = -height-5; y <= height-5; y = y + 1) {
+
+            if(
+                getMark(x,y,z) != "pond" &&
+                (getBlock(x,y,z) == "minecraft:stone" || getBlock(x,y,z) == "minecraft:deepslate" || getBlock(x,y,z) == "minecraft:tuff")
+            ) {
+
+                if(
+                    getBlock(x,y-1,z) != "minecraft:air" &&
+                    getBlock(x,y+1,z) != "minecraft:air" &&
+                    getBlock(x-1,y,z) != "minecraft:air" &&
+                    getBlock(x+1,y,z) != "minecraft:air" &&
+                    getBlock(x,y,z-1) != "minecraft:air" &&
+                    getBlock(x,y,z+1) != "minecraft:air"
+                ) {
+                    continue;
+                }
+
+                // Moss
+                if(randomInt(5) < 4) {
+                    block(x,y,z,"minecraft:moss_block");
+
+                    // Moss Floor
+                    if(getBlock(x,y+1,z) == "minecraft:air") {
+
+                        // Azalea
+                        if (randomInt(20) < 1) {
+                            if (randomInt(2) < 1) {
+                                block(x, y+1, z, "minecraft:flowering_azalea", false);
+                            } else {
+                                block(x, y+1, z, "minecraft:azalea", false);
+                            }
+                        }
+                            
+                        // Ponds
+                        else if (randomInt(80) < 1) {
+                            structure(x, y, z, "clay_pond", "NONE");
+                        }
+
+                        // Grass
+                        else if (randomInt(10) < 5) {
+                            if (randomInt(4) < 3) {
+                                block(x, y+1, z, "minecraft:grass", false);
+                            } else if(getBlock(x, y+2, z) == "minecraft:air") {
+                                block(x, y+1, z, "minecraft:tall_grass[half=lower]", false);
+                                block(x, y+2, z, "minecraft:tall_grass[half=upper]", false);
+                            }
+                        }
+
+                        // Moss Carpet
+                        else if(randomInt(2) == 0 && getBlock(x,y+1,z) == "minecraft:air") {
+                            block(x, y+1, z, "minecraft:moss_carpet", false);
+                        }
+                    }
+                }
+
+                // Ceiling
+                if(getBlock(x,y-1,z) == "minecraft:air") {
+                    if (randomInt(10) == 0) {
+                        structure(x, y-1, z, "cave_vines", "NONE");
+                    }
+                    
+                    else if (randomInt(80) == 0) {
+                        block(x, y-1, z, "minecraft:spore_blossom", false);
+                    }
+
+                    else if (randomInt(4) == 0) {
+                        block(x, y, z, "minecraft:rooted_dirt");
+                        if (randomInt(5) == 0) {
+                            block(x, y-1, z, "minecraft:hanging_roots", false);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
