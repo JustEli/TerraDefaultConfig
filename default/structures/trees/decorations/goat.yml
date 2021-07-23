@@ -1,0 +1,11 @@
+id: "GOAT"
+scripts:
+  - "goat": 1
+spawnable:
+  - "minecraft:grass_block"
+  - "minecraft:snow_block"
+  - "minecraft:snow"
+  - "minecraft:stone"
+  - "minecraft:cobblestone"
+  - "minecraft:oak_leaves"
+  - "minecraft:cyan_terracotta"

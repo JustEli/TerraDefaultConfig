@@ -1,0 +1,106 @@
+# todo
+# fix flora
+
+extends: "MOUNTAINS_PRETTY"
+id: "MOUNTAINS_MEADOW"
+noise-equation: "if(y>0,((-((y / 80)^2)) + 1) + |((noise2(x, z)+0.5) / 3.5)| ,1)"
+prevent-smooth: true
+palette:
+  - "BLOCK:minecraft:bedrock": 0
+  - BEDROCK_MOST: 2
+  - BEDROCK_HALF: 4
+  - BEDROCK_LITTLE: 5
+  - DEEPSLATE: 20
+  #- MOUNTAIN_SNOW: 255
+  - GRASSY: 500
+  #- MOUNTAIN_STONE_GRASS: 108
+  #- MOUNTAIN_GRASS: 84
+slant:
+  palette:
+    - "BLOCK:minecraft:bedrock": 0
+    - BEDROCK_MOST: 2
+    - BEDROCK_HALF: 4
+    - BEDROCK_LITTLE: 5
+    - DEEPSLATE: 20
+    - MOUNTAIN_STONE: 255
+  threshold: 0.32
+vanilla: MOUNTAINS
+#erode: RIVER_M
+color: 0x606060
+tags:
+  - "LAND"
+flora:
+  - density: 30
+    items:
+      - STALACTITE: 1
+      - STALACTITE_2: 1
+      - STALACTITE_3: 1
+      - STALAGMITE: 1
+      - STALAGMITE_2: 1
+    y:
+      min: 15
+      max: 62
+
+  - density: 20
+    y:
+      min: 62
+      max: 250
+    items:
+      - SWEET_BERRIES: 1
+      - GRASS: 7
+      - TALL_GRASS: 5
+      - CORNFLOWER: 2
+      - DANDELION: 1
+  - density: 6
+    items:
+      - STALACTITE_ANYWHERE: 1
+      - STALACTITE_2_ANYWHERE: 1
+      - STALAGMITE_ANYWHERE: 1
+      - STALAGMITE_2_ANYWHERE: 1
+      - CEILING_ICE: 1
+    y:
+      min: 15
+      max: 62
+  - density: 4
+    items:
+      - STALACTITE_ANYWHERE: 1
+      - STALACTITE_2_ANYWHERE: 1
+      - STALAGMITE_ANYWHERE: 1
+      - STALAGMITE_2_ANYWHERE: 1
+    y:
+      min: 8
+      max: 14
+  - density: 4
+    items:
+      - STALACTITE_ANYWHERE: 1
+      - STALACTITE_2_ANYWHERE: 1
+      - CEILING_ICE: 1
+    y:
+      min: 63
+      max: 96
+trees:
+  - density: 0.06
+    items:
+      - GOAT: 1
+    y:
+      min: 70
+      max: 150
+  - density: 0.02
+    items:
+      - DEEP_DARK: 1
+    y:
+      min: 24
+      max: 25
+  - density: 0.06
+    items:
+      - GEODE: 1
+    y:
+      min: 48
+      max: 49
+
+  - density: 5
+    items:
+      - DRIPSTONE: 1
+    y:
+      min: 48
+      max: 49

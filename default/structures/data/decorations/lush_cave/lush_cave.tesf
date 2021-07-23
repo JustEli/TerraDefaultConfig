@@ -80,7 +80,7 @@ for(num x = -width; x <= width; x = x + 1) {
                         structure(x, y-1, z, "cave_vines", "NONE");
                     }
                     
-                    else if (randomInt(80) == 0) {
+                    else if (randomInt(150) == 0) {
                         block(x, y-1, z, "minecraft:spore_blossom", false);
                     }
 

@@ -5,8 +5,8 @@ recalculate-direction:
   min: 5
   max: 10
 length:
-  min: 40
-  max: 80
+  min: 80 # todo
+  max: 120
 start:
   x: 1
   y: 0.25

@@ -4,12 +4,11 @@ vanilla: MUSHROOM_FIELD_SHORE
 color: 0xa000ff
 palette:
   - "BLOCK:minecraft:bedrock": 0
-  - BEDROCK_MOST: 1
-  - BEDROCK_HALF: 2
-  - BEDROCK_LITTLE: 3
+  - BEDROCK_MOST: 2
+  - BEDROCK_HALF: 4
+  - BEDROCK_LITTLE: 5
   - DEEPSLATE: 20
-  - SANDY: 62
-  - MYCELIUM_SHORE: 64
+  - MYCELIUM_SHORE: 75
   - MYCELIUM: 255
 
 trees:

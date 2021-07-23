@@ -1,4 +1,4 @@
-id "plains_2x1_1";
+id "plains_1x2_1";
 num y = 0;
 block(1, y + -1, -4, "minecraft:dirt");
 block(1, y + -1, -1, "minecraft:dirt");

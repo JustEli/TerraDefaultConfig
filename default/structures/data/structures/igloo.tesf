@@ -2,46 +2,46 @@ id "igloo";
 
 num y = 0;
 for(y; y > -50; y = y - 1) {
-    if(check(-4, y + 21, 1) != "LAND") {
+    if(check(-4, y + 21, 1) != "LAND" && check(-4, y + 21, 1) != "minecraft:snow_block") {
         continue;
     }
-    if(check(0, y + 0, -6) != "LAND") {
+    if(check(0, y + 0, -6) != "LAND" && check(0, y + 0, -6) != "minecraft:snow_block") {
         continue;
     }
-    if(check(0, y + 21, 5) != "LAND") {
+    if(check(0, y + 21, 5) != "LAND" && check(0, y + 21, 5) != "minecraft:snow_block") {
         continue;
     }
-    if(check(4, y + 0, 2) != "LAND") {
+    if(check(4, y + 0, 2) != "LAND" && check(4, y + 0, 2) != "minecraft:snow_block") {
         continue;
     }
-    if(check(0, y + 4, -6) != "LAND") {
+    if(check(0, y + 4, -6) != "LAND" && check(0, y + 4, -6) != "minecraft:snow_block") {
         continue;
     }
-    if(check(0, y + 23, -4) != "AIR") {
+    if(check(0, y + 23, -4) != "AIR" && check(0, y + 23, -4) != "minecraft:snow") {
         continue;
     }
-    if(check(4, y + 4, 2) != "LAND") {
+    if(check(4, y + 4, 2) != "LAND" && check(4, y + 4, 2) != "minecraft:snow_block") {
         continue;
     }
-    if(check(4, y + 23, 1) != "AIR") {
+    if(check(4, y + 23, 1) != "AIR" && check(4, y + 23, 1) != "minecraft:snow") {
         continue;
     }
-    if(check(-4, y + 4, 2) != "LAND") {
+    if(check(-4, y + 4, 2) != "LAND" && check(-4, y + 4, 2) != "minecraft:snow_block") {
         continue;
     }
-    if(check(-4, y + 0, 2) != "LAND") {
+    if(check(-4, y + 0, 2) != "LAND" && check(-4, y + 0, 2) != "minecraft:snow_block") {
         continue;
     }
-    if(check(0, y + 21, -4) != "LAND") {
+    if(check(0, y + 21, -4) != "LAND" && check(0, y + 21, -4) != "minecraft:snow_block") {
         continue;
     }
-    if(check(-4, y + 23, 1) != "AIR") {
+    if(check(-4, y + 23, 1) != "AIR" && check(-4, y + 23, 1) != "minecraft:snow") {
         continue;
     }
-    if(check(4, y + 21, 1) != "LAND") {
+    if(check(4, y + 21, 1) != "LAND" && check(4, y + 21, 1) != "minecraft:snow_block") {
         continue;
     }
-    if(check(0, y + 23, 5) != "AIR") {
+    if(check(0, y + 23, 5) != "AIR" && check(0, y + 23, 5) != "minecraft:snow") {
         continue;
     }
     break;

@@ -3,8 +3,8 @@ scripts:
 id: "MONUMENT"
 spawn:
   start:
-    min: 72
-    max: 72
+    min: 28
+    max: 28
   width: 250
-  padding: 50
+  padding: 200
 

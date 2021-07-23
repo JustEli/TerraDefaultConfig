@@ -1,0 +1,6 @@
+id "goat";
+
+if (getBlock(0, 1, 0) != "minecraft:air" && getBlock(0, 1, 0) != "minecraft:snow")
+    fail;
+
+entity(0,1,0,"GOAT");

@@ -1,14 +1,6 @@
-id: PALM
+id: "PALM"
 scripts:
-  "Palm_1": 1
-  "Palm_2": 1
-  "Palm_3": 1
-  "Palm_4": 1
-  "Palm_5": 1
-  "Palm_6": 1
-y-offset: 0
+  - "palm_tree": 1
 spawnable:
-  - "minecraft:grass"
+  - "minecraft:grass_block"
   - "minecraft:sand"
-replaceable:
-  - "minecraft:air"

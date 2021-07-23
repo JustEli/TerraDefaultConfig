@@ -1,5 +1,12 @@
 id "shaft_frame";
 
+str wood = "minecraft:dark_oak_planks";
+
+if(getBiome(0,0,0) != "MESA"){
+    wood = "minecraft:oak_planks";
+
+}
+
 for(num x = -1; x <= 1; x = x + 1) {
     for(num y = -1; y <= 1; y = y + 1) {
         if(randomInt(100) == 0 && !(x == 0 && y == 0)) block(0,y,x,"minecraft:cobweb");
@@ -7,7 +14,7 @@ for(num x = -1; x <= 1; x = x + 1) {
     }
 }
 for(num x = -1; x <= 1; x = x + 1) {
-    block(0,-2,x,"minecraft:oak_planks", false);
+    dynamicBlock(0,-2,x,wood, false);
 }
 
 if(randomInt(20) == 0) {

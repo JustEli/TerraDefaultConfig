@@ -1,5 +1,5 @@
 id "plains_1x1_4";
-num y = 0;
+num y = 1;
 block(1, y + -1, 0, "minecraft:dirt");
 block(1, y + 0, 0, "minecraft:cobblestone_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]");
 block(1, y + 3, -4, "minecraft:stone_brick_stairs[facing=south,half=top,shape=outer_left,waterlogged=false]");

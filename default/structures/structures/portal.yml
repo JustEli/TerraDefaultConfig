@@ -16,6 +16,6 @@ id: "RUINED_PORTAL"
 spawn:
   start:
     min: 64
-    max: 256
+    max: 240
   width: 50
   padding: 100

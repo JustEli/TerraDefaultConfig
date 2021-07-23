@@ -1,27 +1,47 @@
 extends: "MOUNTAINS_PRETTY"
 id: "MOUNTAINS_STONE"
-noise-equation: "((-((y / base)^2)) + 1) + |((noise2(x, z)+0.5) / 3)| + max(noise2(x/2, z/2)*4 + noise2(x*8, z*8)*0.25, 0)"
+noise-equation: "if(y>0,((-((y / 80)^2)) + 1) + |((noise2(x, z)+0.5) / 1.5)| + max(noise2(x/2, z/2)*4 + noise2(x*8, z*8)*0.45, 0) ,1)"
 prevent-smooth: true
 ocean:
   palette: FROZEN_OCEAN
 palette:
   - "BLOCK:minecraft:bedrock": 0
-  - BEDROCK_MOST: 1
-  - BEDROCK_HALF: 2
-  - BEDROCK_LITTLE: 3
+  - BEDROCK_MOST: 2
+  - BEDROCK_HALF: 4
+  - BEDROCK_LITTLE: 5
   - DEEPSLATE: 20
-  - RIVER_BOTTOM: 61
-  - RIVER_SHORE: 62
-  - MOUNTAIN_STONE: 255
-  - MOUNTAIN_STONE_GRASS: 108
-  - MOUNTAIN_GRASS: 84
+  - MOUNTAIN_SNOW: 255
+  - MOUNTAIN_SNOW_MIX: 100
+  - MOUNTAIN_GRASS: 74
+  #- MOUNTAIN_STONE_GRASS: 108
+  #- MOUNTAIN_GRASS: 84
 vanilla: MOUNTAINS
-erode: RIVER_M
+slant:
+  palette:
+    - "BLOCK:minecraft:bedrock": 0
+    - BEDROCK_MOST: 2
+    - BEDROCK_HALF: 4
+    - BEDROCK_LITTLE: 5
+    - DEEPSLATE: 20
+    - MOUNTAIN_STONE: 255
+  threshold: 0.22
+#erode: RIVER_M
 color: 0x606060
 tags:
   - "LAND"
   - "COLD"
 flora:
+  - density: 30
+    items:
+      - STALACTITE: 1
+      - STALACTITE_2: 1
+      - STALACTITE_3: 1
+      - STALAGMITE: 1
+      - STALAGMITE_2: 1
+    y:
+      min: 15
+      max: 62
+
   - density: 1
     y:
       min: 10
@@ -34,48 +54,65 @@ flora:
       max: 156
     items:
       - SNOW: 1
-  - density: 12
+  - density: 6
     items:
-      - STALACTITE: 1
-      - STALAGMITE: 1
+      - STALACTITE_ANYWHERE: 1
+      - STALACTITE_2_ANYWHERE: 1
+      - STALAGMITE_ANYWHERE: 1
+      - STALAGMITE_2_ANYWHERE: 1
       - CEILING_ICE: 1
     y:
       min: 15
       max: 62
-  - density: 8
+  - density: 4
     items:
-      - STALACTITE: 1
-      - STALAGMITE: 1
+      - STALACTITE_ANYWHERE: 1
+      - STALACTITE_2_ANYWHERE: 1
+      - STALAGMITE_ANYWHERE: 1
+      - STALAGMITE_2_ANYWHERE: 1
     y:
       min: 8
       max: 14
-  - density: 8
+  - density: 4
     items:
-      - STALACTITE: 1
+      - STALACTITE_ANYWHERE: 1
+      - STALACTITE_2_ANYWHERE: 1
       - CEILING_ICE: 1
     y:
       min: 63
       max: 96
 carving:
-  CAVE_TUNDRA: 55
+  CAVE_TUNDRA: 43
   RAVINE: 2
 trees:
+  - density: 0.06
+    items:
+      - GOAT: 1
+    y:
+      min: 70
+      max: 150
   - density: 0.02
     items:
       - DEEP_DARK: 1
     y:
       min: 24
       max: 25
-  - density: 0.225
+  - density: 0.06
     items:
-      - DRIPSTONE: 2
       - GEODE: 1
     y:
       min: 48
       max: 49
-  - density: 6
+
+  - density: 5
+    items:
+      - DRIPSTONE: 1
+    y:
+      min: 48
+      max: 49
+  - density: 2
     items:
       - SPRUCE: 1
     y:
       min: 62
-      max: 92
+      max: 190

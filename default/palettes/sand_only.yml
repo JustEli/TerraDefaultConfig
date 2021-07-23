@@ -1,0 +1,15 @@
+layers:
+  - materials: "minecraft:sand"
+    layers: 8
+  - materials: "minecraft:stone"
+    layers: 1
+noise:
+  type: DomainWarp
+  amplitude: 1.5
+  warp:
+    type: WhiteNoise
+  function:
+    type: OpenSimplex2
+    frequency: 0.05
+    salt: 3
+id: "SAND_ONLY"

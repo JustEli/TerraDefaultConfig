@@ -1,0 +1,12 @@
+layers:
+  - materials:
+      - "minecraft:flowering_azalea": 1
+    layers: 1
+id: "FLOWERING_AZALEA"
+spawnable:
+  - "minecraft:rooted_dirt"
+  - "minecraft:coarse_dirt"
+  - "minecraft:dirt"
+  - "minecraft:grass_block"
+replaceable:
+  - "minecraft:air"

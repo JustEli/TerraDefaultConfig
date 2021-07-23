@@ -8,6 +8,17 @@ carving:
 structures:
   - STRONGHOLD
 flora:
+  - density: 30
+    items:
+      - STALACTITE: 1
+      - STALACTITE_2: 1
+      - STALACTITE_3: 1
+      - STALAGMITE: 1
+      - STALAGMITE_2: 1
+    y:
+      min: 15
+      max: 62
+
   - density: 50
     items:
       - TALL_SEAGRASS: 1
@@ -17,9 +28,9 @@ flora:
       max: 64
 palette:
   - "BLOCK:minecraft:bedrock": 0
-  - BEDROCK_MOST: 1
-  - BEDROCK_HALF: 2
-  - BEDROCK_LITTLE: 3
+  - BEDROCK_MOST: 2
+  - BEDROCK_HALF: 4
+  - BEDROCK_LITTLE: 5
   - DEEPSLATE: 20
   - SANDY: 255
   - OCEANFLOOR: 60

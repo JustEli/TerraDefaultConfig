@@ -1,12 +1,24 @@
 layers:
   - materials:
       - "minecraft:gravel": 1
-      - "minecraft:grass_block": 4
-      - "minecraft:sand": 2
-      - "minecraft:clay": 1
+      - "minecraft:grass_block": 8
+      - "minecraft:sand": 4
     layers: 1
-  - materials: "minecraft:dirt"
-    layers: 2
+  - materials:
+      - "minecraft:gravel": 1
+      - "minecraft:dirt": 8
+      - "minecraft:sand": 4
+    layers: 1
+  - materials:
+      - "minecraft:gravel": 1
+      - "minecraft:dirt": 8
+      - "minecraft:sand": 4
+    layers: 1
+  - materials:
+      - "minecraft:gravel": 1
+      - "minecraft:dirt": 8
+      - "minecraft:sand": 4
+    layers: 1
   - materials: "minecraft:stone"
     layers: 1
 id: "RIVER_SHORE"

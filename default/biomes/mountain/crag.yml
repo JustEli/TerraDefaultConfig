@@ -1,4 +1,4 @@
-noise-equation: "((-((y / base)^2)) + 1) + |(noise2(x/1.5, z/1.5)+0.5)|/2.5"
+noise-equation: "if(y>0,((-((y / base)^2)) + 1) + |(noise2(x/1.5, z/1.5)+0.5)|/2.5,1)"
 color: 0x789878
 
 elevation:
@@ -9,19 +9,37 @@ erode: CRAG
 slant:
   palette:
     - "BLOCK:minecraft:bedrock": 0
-    - BEDROCK_MOST: 1
-    - BEDROCK_HALF: 2
-    - BEDROCK_LITTLE: 3
+    - BEDROCK_MOST: 2
+    - BEDROCK_HALF: 4
+    - BEDROCK_LITTLE: 5
+    - DEEPSLATE: 20
     - "STONE_SIDE": 255
     - "GRASSY_STONE": 62
   threshold: 0.1
+slabs:
+  enable: true
+  threshold: 0.0075
+  palettes:
+    "minecraft:red_sand": "BLOCK:minecraft:red_sandstone_slab"
+    "minecraft:stone": "BLOCK:minecraft:stone_slab"
+    "minecraft:cobblestone": "BLOCK:minecraft:cobblestone_slab"
+    "minecraft:sand": "BLOCK:minecraft:sandstone_slab"
+    "minecraft:mossy_cobblestone": "BLOCK:minecraft:mossy_cobblestone_slab"
+    "minecraft:snow_block": "SNOW_LAYERS"
+  use-stairs-if-available: true
+  stair-palettes:
+    "minecraft:red_sand": "BLOCK:minecraft:red_sandstone_stairs"
+    "minecraft:stone": "BLOCK:minecraft:stone_stairs"
+    "minecraft:cobblestone": "BLOCK:minecraft:cobblestone_stairs"
+    "minecraft:sand": "BLOCK:minecraft:sandstone_stairs"
+    "minecraft:mossy_cobblestone": "BLOCK:minecraft:mossy_cobblestone_stairs"
 tags:
   - "LAND"
 palette:
   - "BLOCK:minecraft:bedrock": 0
-  - BEDROCK_MOST: 1
-  - BEDROCK_HALF: 2
-  - BEDROCK_LITTLE: 3
+  - BEDROCK_MOST: 2
+  - BEDROCK_HALF: 4
+  - BEDROCK_LITTLE: 5
   - DEEPSLATE: 20
   - GRASSY: 81
   - GRASSY_STONE: 255

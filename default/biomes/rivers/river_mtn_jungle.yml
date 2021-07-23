@@ -3,12 +3,12 @@ extends: "RIVER_M_P"
 color: 0x0000ff
 palette:
   - "BLOCK:minecraft:bedrock": 0
-  - BEDROCK_MOST: 1
-  - BEDROCK_HALF: 2
-  - BEDROCK_LITTLE: 3
+  - BEDROCK_MOST: 2
+  - BEDROCK_HALF: 4
+  - BEDROCK_LITTLE: 5
   - DEEPSLATE: 20
   - RIVER_BOTTOM: 61
-  - RIVER_SHORE: 62
+  - RIVER_SHORE: 75
   - MOUNTAIN_JUNGLE: 255
 vanilla: JUNGLE
 trees:
@@ -21,6 +21,17 @@ trees:
       min: 62
       max: 92
 flora:
+  - density: 30
+    items:
+      - STALACTITE: 1
+      - STALACTITE_2: 1
+      - STALACTITE_3: 1
+      - STALAGMITE: 1
+      - STALAGMITE_2: 1
+    y:
+      min: 15
+      max: 62
+
   - density: 1
     y:
       min: 10
@@ -37,13 +48,16 @@ flora:
     y:
       min: 62
       max: 180
-  - density: 14
+  - density: 20
     items:
-      - CEILING_LEAVES: 2
-      - VINES: 2
-      - VINES_TALL: 1
-      - STALACTITE: 1
       - SHROOMLIGHT: 1
+      - CEILING_LEAVES_LUSH: 2
+      - GLOW_BERRIES: 2
+      - ROOTED_DIRT: 8
+      - HANGING_ROOTS: 8
+      - MOSS_CAVE: 5
+      - STALACTITE_ANYWHERE: 2
+      - STALACTITE_2_ANYWHERE: 2
     y:
       min: 62
       max: 84

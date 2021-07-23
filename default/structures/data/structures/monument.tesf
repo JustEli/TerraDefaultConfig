@@ -1,78 +1,7 @@
 id "monument";
 
 num y = 0;
-for(y; y > -50; y = y - 1) {
-    if(check(30, y + 6, 2) != "OCEAN") {
-        continue;
-    }
-    if(check(-30, y + 6, 2) != "OCEAN") {
-        continue;
-    }
-    if(check(-5, y + 6, -32) != "OCEAN") {
-        continue;
-    }
-    if(check(-30, y + 2, 2) != "LAND") {
-        continue;
-    }
-    if(check(30, y + 6, 25) != "OCEAN") {
-        continue;
-    }
-    if(check(-30, y + 6, -32) != "OCEAN") {
-        continue;
-    }
-    if(check(30, y + 2, 25) != "LAND") {
-        continue;
-    }
-    if(check(7, y + 2, 25) != "LAND") {
-        continue;
-    }
-    if(check(-7, y + 2, 25) != "LAND") {
-        continue;
-    }
-    if(check(7, y + 6, 25) != "OCEAN") {
-        continue;
-    }
-    if(check(-7, y + 6, 25) != "OCEAN") {
-        continue;
-    }
-    if(check(30, y + 2, 2) != "LAND") {
-        continue;
-    }
-    if(check(-30, y + 6, -9) != "OCEAN") {
-        continue;
-    }
-    if(check(-30, y + 2, 25) != "LAND") {
-        continue;
-    }
-    if(check(30, y + 6, -9) != "OCEAN") {
-        continue;
-    }
-    if(check(30, y + 2, -32) != "LAND") {
-        continue;
-    }
-    if(check(30, y + 6, -32) != "OCEAN") {
-        continue;
-    }
-    if(check(-30, y + 6, 25) != "OCEAN") {
-        continue;
-    }
-    if(check(-30, y + 2, -32) != "LAND") {
-        continue;
-    }
-    if(check(30, y + 2, -9) != "LAND") {
-        continue;
-    }
-    if(check(-30, y + 2, -9) != "LAND") {
-        continue;
-    }
-    if(check(5, y + 6, -32) != "OCEAN") {
-        continue;
-    }
-    break;
-}
-if(y <= -50) {
-    fail;
-}
+
 block(-31, y + 15, -31, "minecraft:prismarine_stairs[facing=east,half=top,shape=straight,waterlogged=true]");
 block(-31, y + 16, -31, "minecraft:prismarine_stairs[facing=north,half=bottom,shape=straight,waterlogged=true]");
 block(-31, y + 17, -31, "minecraft:prismarine_stairs[facing=east,half=top,shape=straight,waterlogged=true]");

@@ -22,10 +22,6 @@ if(select == 0) {
     structure(0,y,0,"plains_1x2_1", "NONE");
 } else if(select == 1) {
     structure(0,y,0,"plains_1x2_2", "NONE");
-} else if(select == 2) {
-    structure(0,y,0,"plains_1x2_3", "NONE");
-} else if(select == 3) {
-    structure(0,y,0,"plains_1x2_4", "NONE");
 }
 
 setMark(5,0,0,"house");

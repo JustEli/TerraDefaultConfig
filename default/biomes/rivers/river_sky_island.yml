@@ -1,7 +1,9 @@
-noise-equation: "if(max(y-96, 0), -(if(max(y-150, 0), |y-150|, |y-150|/16)) - 0.25 + (noise2(x*3, z*3)*3), ((-((y / base)^2)) + 1) + ((noise2(x, z)/4)))"
+noise-equation: "if(y>0,if(max(y-96, 0), -(if(max(y-150, 0), |y-150|, |y-150|/16)) - 0.25 + (noise2(x*3, z*3)*3), ((-((y / base)^2)) + 1) + ((noise2(x, z)/4))),1)"
 variables:
   base: 58
-extends: "BASIC_ORES"
+extends:
+  - "BASIC_ORES"
+  - "CARVING"
 carving: {}
 id: "RIVER_SKY_ISLANDS"
 color: 0x0000ff
@@ -13,15 +15,26 @@ elevation:
   weight: 8
 palette:
   - "BLOCK:minecraft:bedrock": 0
-  - BEDROCK_MOST: 1
-  - BEDROCK_HALF: 2
-  - BEDROCK_LITTLE: 3
+  - BEDROCK_MOST: 2
+  - BEDROCK_HALF: 4
+  - BEDROCK_LITTLE: 5
   - DEEPSLATE: 20
   - RIVER_BOTTOM: 61
-  - RIVER_SHORE: 62
+  - RIVER_SHORE: 75
   - GRASSY: 255
 vanilla: RIVER
 flora:
+  - density: 30
+    items:
+      - STALACTITE: 1
+      - STALACTITE_2: 1
+      - STALACTITE_3: 1
+      - STALAGMITE: 1
+      - STALAGMITE_2: 1
+    y:
+      min: 15
+      max: 62
+
   - density: 1
     y:
       min: 10
@@ -33,7 +46,7 @@ flora:
       min: 61
       max: 80
     items:
-      - SUGARCANE: 25
+      - SUGARCANE: 12
       - GRASS: 675
       - LILY_PAD: 10
       - TALL_GRASS: 150

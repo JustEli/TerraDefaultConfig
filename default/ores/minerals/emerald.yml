@@ -2,8 +2,9 @@ material: "minecraft:emerald_ore"
 material-overrides:
   "minecraft:deepslate": "minecraft:deepslate_emerald_ore"
   "minecraft:tuff": "minecraft:deepslate_emerald_ore"
+  "minecraft:obsidian": "minecraft:deepslate_emerald_ore"
 size:
-  min: 2
-  max: 2
+  min: 1
+  max: 3
 extends: MINERAL
 id: "EMERALD_ORE"

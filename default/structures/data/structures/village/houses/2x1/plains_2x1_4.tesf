@@ -1,4 +1,4 @@
-id "plains_2x1_4";
+id "plains_2x1_2";
 num y = 0;
 
 num composterDis = 2 + randomInt(6);

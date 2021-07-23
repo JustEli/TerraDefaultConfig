@@ -18,16 +18,37 @@ if(check(0,y + 2,0) != "AIR") fail;
 
 
 
-num select = randomInt(5);
 
-if(select == 0) {
-    structure(0,y,0,"plains_2x1_1", "NONE");
-} else if(select == 1) {
-    structure(0,y,0,"plains_2x1_2", "NONE");
-} else if(select == 2) {
-    structure(0,y,0,"plains_2x1_3", "NONE");
-} else if(select == 3) {
-    structure(0,y,0,"plains_2x1_4", "NONE");
+if(getBiome(0,0,0) == "PLAINS" || getBiome(0,0,0) == "FOREST" || getBiome(0,0,0) == "BIRCH_FOREST" ){
+    num select = randomInt(5);
+
+    if(select == 1) {
+        structure(0,y,0,"plains_2x1_2", "NONE");
+    }
+}else if(getBiome(0,0,0) == "TAIGA" || getBiome(0,0,0) == "SNOWY_TAIGA"){
+    num select = randomInt(5);
+
+    if(select == 1) {
+        structure(0,y,0,"spruce_2x1_2", "NONE");
+    }
+}else if(getBiome(0,0,0) == "DESERT" || getBiome(0,0,0) == "SAVANNA"){
+    num select = randomInt(5);
+
+    if(select == 1) {
+        structure(0,y,0,"desert_2x1_2", "NONE");
+    }
+}else if(getBiome(0,0,0) == "FLOWER_FOREST" || getBiome(0,0,0) == "MUSHROOM"){
+    num select = randomInt(5);
+
+    if(select == 1) {
+        structure(0,y,0,"mush_2x1_2", "NONE");
+    }
+}else{
+    num select = randomInt(5);
+
+    if(select == 1) {
+        structure(0,y,0,"plains_2x1_2", "NONE");
+    }
 }
 
 setMark(5,0,0,"house");

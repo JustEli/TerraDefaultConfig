@@ -3,6 +3,8 @@ layers:
     layers: 3
   - materials: "minecraft:red_sandstone"
     layers: 4
+  - materials: "minecraft:terracotta"
+    layers: 3
   - materials: "minecraft:stone"
     layers: 1
 id: RED_DESERT

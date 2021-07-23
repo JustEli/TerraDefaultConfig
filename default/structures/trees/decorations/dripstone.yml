@@ -12,3 +12,5 @@ spawnable:
   - "minecraft:red_sand"
   - "minecraft:red_sandstone"
   - "minecraft:sandstone"
+  - "minecraft:dripstone_block"
+  - "minecraft:deepslate"

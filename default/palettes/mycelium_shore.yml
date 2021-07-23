@@ -1,11 +1,17 @@
 layers:
   - materials:
-      - "minecraft:gravel": 1
-      - "minecraft:mycelium": 4
-      - "minecraft:sand": 2
-    layers: 1
-  - materials: "minecraft:dirt"
-    layers: 2
+      - "minecraft:mycelium": 2
+      - "minecraft:sand": 1
+    layers: 3
   - materials: "minecraft:stone"
     layers: 1
 id: "MYCELIUM_SHORE"
+noise:
+  type: DomainWarp
+  amplitude: 1.5
+  warp:
+    type: WhiteNoise
+  function:
+    type: OpenSimplex2
+    frequency: 0.05
+    salt: 3

@@ -7,7 +7,7 @@ id: DEEPSLATE
 noise:
   dimensions: 3
   type: Expression
-  equation: "((simplex(x, y, z)+1) * max((-y+20)/20,0))-1"
+  equation: "( (simplex(x, y, z) + 1) * max((25 - y) / 20, 0) ) - 1"
   functions:
     simplex:
       dimensions: 3

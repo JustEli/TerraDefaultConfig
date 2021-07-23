@@ -3,4 +3,5 @@ id: MINERAL
 replace:
   - "minecraft:stone"
   - "minecraft:deepslate"
+  - "minecraft:obsidian"
 type: VANILLA

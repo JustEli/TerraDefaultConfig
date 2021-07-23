@@ -1,5 +1,12 @@
 id "shaft_frame_spider";
 
+str wood = "minecraft:dark_oak_planks";
+
+if(getBiome(0,0,0) != "MESA"){
+    wood = "minecraft:oak_planks";
+
+}
+
 for(num x = -1; x <= 1; x = x + 1) {
     for(num y = -1; y <= 1; y = y + 1) {
         if(randomInt(3) == 0) block(0,y,x,"minecraft:air");
@@ -7,6 +14,6 @@ for(num x = -1; x <= 1; x = x + 1) {
     }
 }
 for(num x = -1; x <= 1; x = x + 1) {
-    block(0,-2,x,"minecraft:oak_planks", false);
+    dynamicBlock(0,-2,x,wood, false);
 }
 if(randomInt(2) == 0) block(0,-1,0,"minecraft:rail[shape=east_west]");
